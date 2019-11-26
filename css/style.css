@@ -1,0 +1,20 @@
+body {
+  background-color: #2339de;
+}
+canvas {
+  display: block;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+table {
+display: block;
+margin: 0 auto;
+border: 0px solid black;
+}
+td {
+  background-color: #2339de;
+  border: 2.5px solid black;
+}
+td.wood {
+background-image: url("Melamine-wood-001.png");
+}

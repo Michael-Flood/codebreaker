@@ -1,0 +1,2 @@
+FEATURES TO BE ADDED:
+  - counter for correct colours on incorrect squares

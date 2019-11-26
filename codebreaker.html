@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CodeBreaker</title>
+    <style type="text/css" src="css/style.css">
+      body {
+        background-color: #2339de;
+      }
+      canvas {
+        display: block;
+        border: 1px solid black;
+        margin: 0 auto;
+      }
+	  table {
+	  display: block;
+		margin: 0 auto;
+		border: 0px solid black;
+	  }
+      td {
+        background-color: #2339de;
+        border: 2.5px solid black;
+      }
+	  td.wood {
+		background-image: url("Melamine-wood-001.png");
+	  }
+    </style>
+  </head>
+
+  <body>
+    <table width="1200px">
+	<tr>
+		<td colspan="3"><center><img src="CodeBreaker.png" width="350px"></center></td>
+	</tr>
+	<tr>
+		<td class="wood" width="400px" style="padding:5px">
+			<p><b>Goal:</b> Your mission in Codebreaker is to guess a secret four-color code created by the game. You have eight chances to guess the correct code. Every time you Test a row, the game will give you feedback based on your answer.</p>
+			<p><b>How To Play:</b></p>
+			<p>1) Select a color from the six colors in the bottom center frame. The "Active Color" bar in the bottom of the game board (above the color selection) shows your currently selected color.</p>
+			<p>2) Click on the white boxes within the black rectangle on the gameboard to change their color and build your guess at the hidden code.</p>
+			<p>3) When you have completed the row, click on "Test Row" to test your guess against the hidden code. You may only submit a guess once all the white squares in the black rectangle have been colored in.</p>
+			<p>4) If your guesses are correct, you win. If you are incorrect, the game will display feedback between [square brackets] to the right of the active row of the gameboard. The guide to interpreting the feedback is on the right frame.</p>
+			<p>5) If you run out of guesses (have filled up all the rows without guessing the correct code) the game is over. The correct answer will be displayed on the white rectangle in the upper left of the game board.
+			<p>5) To erase your current row, click "Reset Row"</p>
+			<p>6) To start over with a clean board and a new random hidden code, click "New Game"</p>
+		</td>
+		<td class="wood" width="400px">
+			<canvas id="gameboard" width="350" height="650"></canvas>
+			<canvas id="selector" width="370" height="70"></canvas>
+			<div align="center">
+				<button onclick="newGame()">New Game</button>
+				<button onclick="resetRow()">Reset Row</button>
+				<button onclick="testRow()">Test Row</button>
+			</div>
+		<div align="center">
+			<p>Copyright (C) 2019 Michael Flood</p>
+		</div>
+		</td>
+		<td class="wood" width="400px" style="padding:5px">
+			<p><b>Feedback Guide:</b></p>
+			<p>When you click "Test Row", your answer is compared to the hidden code.</p>
+			<p>Results are given based on two factors:</p>
+			<p>(i) How many colors you have on the correct square.</p>
+			<p>(ii) How many colors you have on the incorrect square.</p>
+			<p><b>Examples:</b></p>
+			<p> 4 colors correct, all on the correct square: [4,0]</p>
+			<p> 4 colors correct, none on the correct square: [0,4]</p>
+			<p> 1 color correct and on the right square, and two colors correct but on the wrong squares: [1,2]</p>
+			<p><b>Sources:</b></p>
+			<p>Wood panelling: <a href="https://www.pixeden.com/graphic-web-backgrounds/wood-pattern-background" target="_blank">www.pixeden.com</a>
+		</td>
+	</tr>
+	</table>
+    <script type="text/javascript" src="js/game.js"></script>
+  </body>
+</html>
